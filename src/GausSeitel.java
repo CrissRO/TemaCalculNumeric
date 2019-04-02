@@ -46,6 +46,7 @@ public class GausSeitel {
 		double sum = 0.0;
 		
 		for(int i = 0;i<row;i++)
+			if(i != row)
 				sum += matrixA[row][i] * y[i];
 		
 		return sum;
@@ -75,10 +76,10 @@ public class GausSeitel {
 			
 			do {
 				
-				y[0] = (1.00/matrixA[0][0]) * (b[0] - calcSum(0));
+				//y[0] = (1.00/matrixA[0][0]) * (b[0] - calcSum(0));
 				
-				for(int i=1;i<n;i++) 
-					y[i] = (1.00/matrixA[i][i]) * (b[i] - calcSumU(i) + calcSumM(i));
+				for(int i=0;i<n;i++) 
+					y[i] = (1.00/matrixA[i][i]) * (b[i] - calcSumU(i) - calcSumM(i));
 				
 				norm  = calcNorm();
 				

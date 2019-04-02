@@ -13,12 +13,12 @@ public class Main {
 			Tridiagonal tri = new Tridiagonal("tridiagonal.in");
 			Tridiagonal trr = new Tridiagonal("tridiagonal.in");
 			
-			tri.solveIterative();
+			//tri.solveIterative();
 			
-			trr.solveRecursive(1,false);
-			trr.showSolutions();
+			//trr.solveRecursive(1,false);
+			//trr.showSolutions();
 			
-			Jacobi jcb = new Jacobi("jacobi.in",10000,0.0001);
-			GausSeitel gs = new GausSeitel("jacobi.in", 100, 0.00001);
+			Jacobi jcb = new Jacobi(		"jacobi.in",10000, 0.0001);
+			GausSeitel gs = new GausSeitel("jacobi.in", 10000, 0.0001);
 		}
 }
